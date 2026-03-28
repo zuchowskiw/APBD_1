@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/APBD_1.csproj",
+      "projectUniqueName": "/home/wojciechzuchowski/PJATK/APBD/APBD_1/APBD_1/APBD_1/APBD_1.csproj",
       "projectName": "APBD_1",
-      "projectPath": "/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/APBD_1.csproj",
+      "projectPath": "/home/wojciechzuchowski/PJATK/APBD/APBD_1/APBD_1/APBD_1/APBD_1.csproj",
       "packagesPath": "/home/wojciechzuchowski/.nuget/packages/",
-      "outputPath": "/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/",
+      "outputPath": "/home/wojciechzuchowski/PJATK/APBD/APBD_1/APBD_1/APBD_1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/wojciechzuchowski/.nuget/NuGet/NuGet.Config"

@@ -1,4 +1,4 @@
-using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace APBD_1;
 
@@ -49,5 +49,21 @@ public class User
         }
 
         return returnedUser;
+    }
+    
+    public static void WriteExtentToFile(string filename)
+    {
+        string jsonString = JsonSerializer.Serialize(User._extent);
+        File.WriteAllText(filename, jsonString);
+    }
+
+    public static void ReadExtentFromFile(string filename)
+    {
+        string jsonString = File.ReadAllText(filename);
+        _extent = JsonSerializer.Deserialize<List<User>>(jsonString);
+        if (_extent == null)
+        {
+            throw new RentException("Failed to read extent from file");
+        }
     }
 }
