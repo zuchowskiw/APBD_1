@@ -173,7 +173,7 @@ public class Service
                 Device.ListAllDevices();
                 break;
             case "list-available-devices":
-                // Device.ListAvailableDevices():
+                Device.ListAvailableDevices();
                 break;
             case "list-user-rentals":
                 ListUserRentals(parameters);

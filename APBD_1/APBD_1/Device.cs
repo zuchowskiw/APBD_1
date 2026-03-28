@@ -9,9 +9,10 @@ public class Device
     public double LateFeeParameter{ get; }
     public DeviceStatus Status {get; set;}
     public int Id { get; set; }
-
+    // Aktualnie nie działa ponieważ zapomniałem, że przy deserializacji zostaje klasa Device
     public virtual void DescribeSelf()
     {
+        
     }
 
     public static void ListAllDevices()
@@ -19,6 +20,17 @@ public class Device
         foreach (var dev in Device._extent)
         {
             dev.DescribeSelf();
+        }
+    }
+
+    public static void ListAvailableDevices()
+    {
+        foreach (var dev in Device._extent)
+        {
+            if (dev.Status == DeviceStatus.Available)
+            {
+                dev.DescribeSelf();
+            }
         }
     }
 
