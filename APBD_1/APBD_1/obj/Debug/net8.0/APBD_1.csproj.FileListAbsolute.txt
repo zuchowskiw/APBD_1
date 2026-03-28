@@ -1,0 +1,14 @@
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/bin/Debug/net8.0/APBD_1
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/bin/Debug/net8.0/APBD_1.deps.json
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/bin/Debug/net8.0/APBD_1.runtimeconfig.json
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/bin/Debug/net8.0/APBD_1.dll
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/bin/Debug/net8.0/APBD_1.pdb
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.GeneratedMSBuildEditorConfig.editorconfig
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.AssemblyInfoInputs.cache
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.AssemblyInfo.cs
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.csproj.CoreCompileInputs.cache
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.dll
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/refint/APBD_1.dll
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.pdb
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/APBD_1.genruntimeconfig.cache
+/home/wojciechzuchowski/RiderProjects/APBD_1/APBD_1/obj/Debug/net8.0/ref/APBD_1.dll
