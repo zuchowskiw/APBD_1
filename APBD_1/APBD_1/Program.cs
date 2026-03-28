@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace APBD_1;
 
-Console.WriteLine(DateTime.Now.Subtract(new DateTime(2026, 03, 27, 10, 50, 0)).TotalDays);
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Service s = new Service();
+        s.parseArguments(args);
+    }
+}

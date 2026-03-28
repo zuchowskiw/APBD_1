@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace APBD_1;
@@ -5,7 +6,7 @@ namespace APBD_1;
 public class User
 {
     private static int _idCounter = 0;
-    private static List<User> _extent = new List<User>();
+    public static List<User> _extent = new List<User>();
     public int  Id {get;}
     public string Name {get; set;}
     public string Surname {get; set;}
@@ -15,6 +16,19 @@ public class User
     {
         User._idCounter += 1;
         return User._idCounter;
+    }
+
+    public static User GetById(int userId)
+    {
+        return _extent.Find(x => x.Id == userId);
+    }
+
+    public static void ListAllUsers()
+    {
+        foreach (var user in User._extent)
+        {
+            Console.WriteLine($"Name: {user.Name}, Surname: {user.Surname},  UserType: {user.UserType}");
+        }
     }
 
     public User(string name, string surname, UserType userType)
@@ -47,7 +61,7 @@ public class User
         {
             throw new RentException("Unknown user type entered");
         }
-
+        Console.WriteLine("Adding user!");
         return returnedUser;
     }
     
@@ -65,5 +79,7 @@ public class User
         {
             throw new RentException("Failed to read extent from file");
         }
+
+        User._idCounter = User._extent.MaxBy(x => x.Id).Id;
     }
 }

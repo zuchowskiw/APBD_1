@@ -4,7 +4,14 @@ public class Projector : Device
 {
     public int Lumens { get; }
     public bool WithSound { get; }
-    public override Projector ParseAndValidateDevice(string[] input)
+    
+    public override void DescribeSelf()
+    {
+        Console.WriteLine($"Name: {Name}," +
+                          $"Lumens: {Lumens}" +
+                          $"With sound: {WithSound}");
+    }
+    public static Projector ParseAndValidateDevice(string[] input)
     {
         if (input.Length != 4)
         {
@@ -55,6 +62,7 @@ public class Projector : Device
     {
         this.Name = name;
         this.Status = status;
+        this.Id = Device.GetNextId();
         this.Lumens = lumens;  
         this.WithSound = withSound;
         Device._extent.Add(this);

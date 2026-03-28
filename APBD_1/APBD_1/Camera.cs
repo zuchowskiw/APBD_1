@@ -4,17 +4,25 @@ public class Camera : Device
 {
     public int PixelCount { get; }
     public int FocalLength { get; }
+    
+    public override void DescribeSelf()
+    {
+        Console.WriteLine($"Id: {Id}" + "Name: {Name}," +
+                          $"Pixel Cound: {PixelCount}" +
+                          $"Focal Length: {FocalLength}");
+    }
 
     public Camera(string name, DeviceStatus status, int pixelCount, int focalLength)
     {
-        Name = name;
-        Status = status;
-        PixelCount = pixelCount;
-        FocalLength = focalLength;
+        this.Name = name;
+        this.Status = status;
+        this.Id = Device.GetNextId();
+        this.PixelCount = pixelCount;
+        this.FocalLength = focalLength;
         Device._extent.Add(this);
     }
 
-    public override Camera ParseAndValidateDevice(string[] input)
+    public static Camera ParseAndValidateDevice(string[] input)
     {
         if (input.Length != 4)
         {

@@ -9,12 +9,23 @@ public class Laptop : Device
 
     public Laptop(string name, DeviceStatus status, string manufacturer, int weight)
     {
+        this.Name = name;
+        this.Status = status;
+        this.Id = Device.GetNextId();
         this.manufacturer=manufacturer;
         this.weight=weight;
         Device._extent.Add(this);
     }
 
-    public override Laptop ParseAndValidateDevice(string[] input)
+    public override void DescribeSelf()
+    {
+        Console.WriteLine($"Id: {Id}" +
+                          $"Name: {Name}," +
+                          $"Manufacturer: {manufacturer}" +
+                          $"Weight: {weight}");
+    }
+
+    public static Laptop ParseAndValidateDevice(string[] input)
     {
         if (input.Length != 4)
         {
