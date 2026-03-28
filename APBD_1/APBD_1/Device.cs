@@ -3,7 +3,7 @@ using System.Text.Json;
 
 public class Device
 {
-    protected static List<Device> _extent = new List<Device>();
+    public static List<Device> _extent = new List<Device>();
     private static int CurrentId = 0;
     public string Name {get; set;}
     public double LateFeeParameter{ get; }

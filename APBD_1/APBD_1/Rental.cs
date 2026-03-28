@@ -4,8 +4,8 @@ namespace APBD_1;
 
 public class Rental
 {
-    public int RenterId { get;}
-    public int DeviceId { get; }
+    public int RenterId { get; set; }
+    public int DeviceId { get; set;}
     public DateTime RentalDate { get; set; }
     public int RentalDaysCount { get; set; }
     public bool ItemReturned { get; set; }
@@ -31,6 +31,8 @@ public class Rental
         Rental r = _extent.FindAll(x => x.RenterId == deviceId)[0];
         return DateTime.Now.Subtract(r.RentalDate).Days - r.RentalDaysCount;
     }
+    
+    public Rental(){}
 
     public Rental(int userId, int deviceId, 
             DateTime rentalDate, int rentalDaysCount, bool itemReturned, bool returnedInTime)
@@ -41,6 +43,7 @@ public class Rental
         this.ItemReturned = itemReturned;
         this.ReturnedInTime = returnedInTime;
         this.RentalDaysCount = rentalDaysCount;
+        Rental._extent.Add(this);
     }
 
     public Rental(User user, Device device, int rentalDays)
@@ -94,10 +97,14 @@ public class Rental
     public static void ReadExtentFromFile(string filename)
     {
         string jsonString = File.ReadAllText(filename);
-        _extent = JsonSerializer.Deserialize<List<Rental>>(jsonString);
-        if (_extent == null)
+        var tmp = JsonSerializer.Deserialize<List<Rental>>(jsonString);
+        if (tmp == null)
         {
             throw new RentException("Failed to read extent from file");
+        }
+        else
+        {
+            _extent = tmp;
         }
     }
     
